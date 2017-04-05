@@ -21,7 +21,7 @@ plot(df$t,
      df$g,
      type="l")
 
-t_start <- 4 # this is for cutting first peak
+t_start <- 5.5 # this is for cutting first peak
 plot(df[t>t_start,]$t,
      df[t>t_start,]$g,
      type="l")
