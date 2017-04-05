@@ -1,18 +1,18 @@
-heights <- c(1381.0, 
-             1710.0,
-             1990.0,
-             2537.0)
-HICs <- c(539.9,
-          862.6,
-          1148.5,
-          1823.7)
+heights <- c(1248.0, 
+             1504.0,
+             1751.0,
+             2013.0)
+HICs <- c(566.6,
+          877.9,
+          1181.5,
+          1540.3)
 
 point_label <- "I"
 
 df <- data.frame(h=heights,
                  hic=HICs)
 
-outFile <- paste("229706_Grafici/Punto_", point_label, "_Altezza_Critica.PDF",
+outFile <- paste("229707_Grafici/Punto_", point_label, "_Altezza_Critica.PDF",
                  sep="")
 
 pdf(outFile,8,6)
@@ -26,7 +26,7 @@ plot(1e-3*df$h,
      pch=19,
      col="black",
      cex=1.2,
-     xlim=c(1.2,2.5),
+     xlim=c(1.1,2.2),
      ylim=c(500,1800),
      xlab="h [m]",
      ylab="HIC",
@@ -75,11 +75,12 @@ lines(x,
       y,
       col="grey")
 
-
 points(1e-3*df$h,
        df$hic,
        pch=19,
        col="black")
+
+#ok up to here
 
 A <- as.numeric(fit_1$coefficients[1])
 B <- as.numeric(fit_1$coefficients[2])
@@ -89,14 +90,14 @@ C <- as.numeric(fit_1$coefficients[3])
 #      2.5,
 #      add=TRUE,
 #      col="red")
+
 s1 <- Re(polyroot(c(A-1000,
                     B,
                     C))[1])
+
+
 yp <- predict(fit_1,
              data.frame(hs=s1))
-
-
-
 points(s1,
        yp,
        pch=15,
