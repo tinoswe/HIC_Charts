@@ -1,18 +1,18 @@
-heights <- c(1248.0, 
-             1504.0,
-             1751.0,
-             2013.0)
-HICs <- c(566.6,
-          877.9,
-          1181.5,
-          1540.3)
+heights <- c(956.0, 
+             1211.0,
+             1457.0,
+             1713.0)
+HICs <- c(557.4,
+          888.8,
+          1296.4,
+          1751.8)
 
 point_label <- "I"
 
 df <- data.frame(h=heights,
                  hic=HICs)
 
-outFile <- paste("229707_Grafici/Punto_", point_label, "_Altezza_Critica.PDF",
+outFile <- paste("229708_Grafici/Punto_", point_label, "_Altezza_Critica.PDF",
                  sep="")
 
 pdf(outFile,8,6)
@@ -26,8 +26,8 @@ plot(1e-3*df$h,
      pch=19,
      col="black",
      cex=1.2,
-     xlim=c(1.1,2.2),
-     ylim=c(500,1800),
+     xlim=c(0.75,1.8),
+     ylim=c(450,1950),
      xlab="h [m]",
      ylab="HIC",
      xaxs = "i",
@@ -66,7 +66,7 @@ if (coef(fit_1)[3] < 0) {
               weights = 0.3*hics/100.)
 }
 
-x <- seq(1, 
+x <- seq(.5, 
          3,
          length.out = 250)
 y <- predict(fit_1,
