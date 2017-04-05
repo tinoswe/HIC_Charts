@@ -5,9 +5,9 @@ fPath <- sub(paste("/",fName,sep=""), "", myFile)
 #myFile
 #fName
 #fPath
-HIC_tmin <- 4570.39*1e-3
-HIC_tmax <- 4576.52*1e-3
-HICmax <- 1191.01
+HIC_tmin <- 5127.3*1e-3
+HIC_tmax <- 5132.38*1e-3
+HICmax <- 1188.8
 HICinterval <- 1e3*(HIC_tmax - HIC_tmin)
 
 
@@ -29,7 +29,7 @@ plot(df$t,
      df$g,
      type="l")
 
-t_start <- 4. # this is for cutting first peak
+t_start <- 4.5 # this is for cutting first peak
 plot(df[t>t_start,]$t,
      df[t>t_start,]$g,
      type="l")

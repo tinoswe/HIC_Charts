@@ -1,18 +1,18 @@
-heights <- c(1613.0, 
-             1903.0,
-             2303.0,
-             2610.0)
-HICs <- c(650.1,
-          879.5,
-          1191.0,
-          1479.9)
+heights <- c(1502.0, 
+             1748.0,
+             2009.0,
+             2306.0)
+HICs <- c(608.6,
+          917.5,
+          1188.8,
+          1550.9)
 
-point_label <- "I"
+point_label <- "A"
 
 df <- data.frame(h=heights,
                  hic=HICs)
 
-outFile <- paste("229705_Grafici/Punto_", point_label, "_Altezza_Critica.PDF",
+outFile <- paste("229706_Grafici/Punto_", point_label, "_Altezza_Critica.PDF",
                  sep="")
 
 pdf(outFile,8,6)
@@ -26,8 +26,8 @@ plot(1e-3*df$h,
      pch=19,
      col="black",
      cex=1.2,
-     xlim=c(1.5,2.8),
-     ylim=c(500,1600),
+     xlim=c(1.2,2.5),
+     ylim=c(500,1800),
      xlab="h [m]",
      ylab="HIC",
      xaxs = "i",
