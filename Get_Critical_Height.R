@@ -1,13 +1,13 @@
-heights <- c(670.0, 
+heights <- c(656.0, 
              923.0,
-             1202.0,
-             1460.0)
-HICs <- c(334.9,
-          783.0,
-          1424.4,
-          2191.7)
+             1195.0,
+             1451.0)
+HICs <- c(300.2,
+          676.4,
+          1220.8,
+          1911.5)
 
-point_label <- "G"
+point_label <- "I"
 
 df <- data.frame(h=heights,
                  hic=HICs)
